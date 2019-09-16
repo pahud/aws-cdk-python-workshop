@@ -99,3 +99,18 @@ cdk synth
 
 
 
+### Enable Trigger Suggest
+
+The best way to have developing productivity is enable vscode trigger suggest, if the built-in shortcuts doesn't work for you, just open preferences panel by: 
+
+ Code --> Preferences --> Keyboard Shortcuts
+
+![](/Users/yikaikao/git/aws-cdk-python-workshop/Lab1/img/08-shortchts.png)
+
+Then, search for : trigger and edit.
+
+![](/Users/yikaikao/git/aws-cdk-python-workshop/Lab1/img/09-newdefinition.png)
+
+Finally, you could have the intelligence suggestion by hitting the shortcuts.
+
+![](/Users/yikaikao/git/aws-cdk-python-workshop/Lab1/img/10-suggest.png)
