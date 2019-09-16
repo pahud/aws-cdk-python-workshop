@@ -14,7 +14,7 @@ Install or update the AWS CDK CLI from npm [(requires Node.js >= 8.11x)](https:/
 $ npm i -g aws-cdk
 ```
 
-![](/Users/yikaikao/git/aws-cdk-python-workshop/Lab1/img/02-cdk-version.png)
+![](img/02-cdk-version.png)
 
 check the cdk version to verify installation success, the version should be + aws-cdk@1.8.0
 
@@ -32,7 +32,7 @@ $ cdk init sample-app --language=python
 
 
 
-![](/Users/yikaikao/git/aws-cdk-python-workshop/Lab1/img/03-init-app.png)
+![](img/03-init-app.png)
 
 
 
@@ -44,7 +44,7 @@ $ source .env/bin/activate
 $ pip install -r requirements.txt
 ```
 
-![](/Users/yikaikao/git/aws-cdk-python-workshop/Lab1/img/04-pip-install-requirements.png)
+![](img/04-pip-install-requirements.png)
 
 
 
@@ -64,11 +64,11 @@ Download anbd install the suitable distribution on your laptop.
 
 Click the extentions pannel, and install the following extensions.
 
-![](/Users/yikaikao/git/aws-cdk-python-workshop/Lab1/img/05-python-extensions.png)
+![](img/05-python-extensions.png)
 
 After the python extension is installed, when you open any .py file in vscode,  will also ask you to install Linter pylint. 
 
-![](/Users/yikaikao/git/aws-cdk-python-workshop/Lab1/img/06-linter-pylint.png)
+![](img/06-linter-pylint.png)
 
 Please install for code assistence directly or manually install it:
 
@@ -95,7 +95,7 @@ $ pytest
 cdk synth
 ```
 
-![](/Users/yikaikao/git/aws-cdk-python-workshop/Lab1/img/07-cdk-synth.png)
+![](img/07-cdk-synth.png)
 
 
 
@@ -105,12 +105,12 @@ The best way to have developing productivity is enable vscode trigger suggest, i
 
  Code --> Preferences --> Keyboard Shortcuts
 
-![](/Users/yikaikao/git/aws-cdk-python-workshop/Lab1/img/08-shortchts.png)
+![](img/08-shortchts.png)
 
 Then, search for : trigger and edit.
 
-![](/Users/yikaikao/git/aws-cdk-python-workshop/Lab1/img/09-newdefinition.png)
+![](img/09-newdefinition.png)
 
 Finally, you could have the intelligence suggestion by hitting the shortcuts.
 
-![](/Users/yikaikao/git/aws-cdk-python-workshop/Lab1/img/10-suggest.png)
+![](img/10-suggest.png)
