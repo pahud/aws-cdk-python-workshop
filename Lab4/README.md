@@ -54,7 +54,7 @@ pycharm .
 * Now you have init the cdk project, you can check the project structure and add dependencies in ./setup.py in IDE  
 ![IDE Setup](./img/img02-setuppy-1.png)
 * Replace the install_requires with below packages in ./setup.py
-```
+```python
     install_requires=[
         "aws-cdk.core",
         "aws-cdk.aws-dynamodb",
@@ -83,7 +83,7 @@ pip install -r requirements.txt
 Now you can start coding your infrastructure.   
 ## Coding 
 * Open ./cdk_pycon/cdk_pycon_stack.py in your IDE, it should be like this:  
-```
+```python
 from aws_cdk import core
 
 
@@ -96,7 +96,7 @@ class CdkPyconStack(core.Stack):
 ```
 * Let's add a DynamoDB table into the code.  
 Import aws_dynamodb, and add a Table, so the code become:
-```
+```python
 from aws_cdk import core, aws_dynamodb
 
 
@@ -126,15 +126,13 @@ cdk deploy
 Enter "y" while deploying ask to confirm.  
 You can observe via AWS Console to see the CloudFormation template is being deploy and after a minute, a DynamoDB table is created.
 ![deploy](./img/img06-deploy-1.png)
-![deploy](./img/img06-deploy-2.png)
-After one minute, after the deploy completed, you can check the AWS Console to see the DynamoDB table.
 ## Update 
 * Add AWS Lambda function code  
 Create a new sub-folder in the project and copy the lambda function code in this github repo to ./lambda/handler.py  
 ![lambda handler](./img/img04-lambda-1.png)
 * Add Lambda and API Gateway to the stack.  
 Open cdk_pycon_stack.py. Import aws_lambda and aws_apigateway and add the code into stack, so the code become:  
-```
+```python
 from aws_cdk import core, aws_dynamodb, aws_lambda, aws_apigateway
 
 
@@ -169,8 +167,9 @@ class CdkPyconStack(core.Stack):
 cdk deploy
 ```
 ![cdk deploy output](./img/img06-deploy-3.png)
+It should take about 3 minutes to complete the deployment.  
 * From the cdk deploy output, copy the url which is the Api Gateway entry point address https://xxxxxx.execute-api.ap-northeast-1.amazonaws.com/prod/  
-* Test from a web browser with 3 steps:
+## Test from a web browser  
 1. Access the api.  
 Backend return the usage querystring as help.
 ![web1](./img/img07-web-1.png)
@@ -188,11 +187,11 @@ The browser should redirect to your_target_url
 from cdk_watchful import Watchful
 ```
 * Add below code into stack  
-```
-wf = Watchful(self, 'watchful', alarm_email='your@email.com')
-wf.watch_scope(self)
-```
 This will auto create a CloudWatch Dashboard to monitor all your resources and create SNS alarm to your mail address, in just two lines of code!  
+```python
+    wf = Watchful(self, 'watchful', alarm_email='your@email.com')
+    wf.watch_scope(self)
+```
 Final stack code become like this:
 [cdk_pycon_stack.py](./cdk_pycon/cdk_pycon_stack.py)
 * Deploy the update stack in Terminal
