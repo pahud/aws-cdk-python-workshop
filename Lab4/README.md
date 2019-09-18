@@ -124,7 +124,7 @@ cdk bootstrap
 cdk deploy
 ```
 Enter "y" while deploying ask to confirm.  
-You can observe via AWS Console to see the CloudFormation template is being deploy and after a minute, a DynamoDB table is created.
+You can observe via AWS Console -> CloudFormation to see the CloudFormation template is being deploy and after a minute, a DynamoDB table is created.
 ![deploy](./img/img06-deploy-1.png)
 ## Update 
 * Add AWS Lambda function code  
@@ -176,7 +176,7 @@ Backend return the usage querystring as help.
 2. Add the querystring and target url with https://your_target_url after the api url.  
 Backend return the created shorten url code
 ![web2](./img/img07-web-2.png)
-You can check the DynamoDB from console for the new created backend record.
+You can check the DynamoDB from AWS Console -> DynamoDB -> Table for the new created backend record.
 3. Use the created url to access.  
 ![web3](./img/img07-web-3.png)
 The browser should redirect to your_target_url  
@@ -202,6 +202,14 @@ cdk deploy
 ![output link](./img/img09-watch-01.png)
 You can find Metrics and Alarm have been created including DynamoDB, Lambda and API Gateway.  
 ![CW](./img/img09-watch-02.png)
+## How about only update the Lambda function code?  
+* Just change your code and cdk deploy.  AWS CDK will create changeset and update the code on AWS Cloud. Try to add some lines of code in IDE, and deploy.  
+![lambda code update](./img/img10-lambda-04.png)
+Open AWS Console -> Lambda, you can see the lambda code have been changed:
+![lambda code update](./img/img10-lambda-02.png)
+* If you change nothing, cdk will change nothing and end. 
+![lambda code not change](./img/img10-lambda-05.png)
+
 ## Custom Domain (optional)
 You have completed to deploy a Serverless website backend, but you might not be satisified with the url, it is still too long. Refer to below steps to use your own domain name instead of the long domain name xxx.xxx.amazonaws.com and no stage path /prod/, such as only go.xyz.com
 1. Create SSL certificate in Amazon Certificate Manager service
@@ -211,9 +219,12 @@ You have completed to deploy a Serverless website backend, but you might not be 
 
 For more code and demo, please refer to the Github repo https://github.com/aws-samples/aws-cdk-examples/tree/master/python/url-shortener  
 Or youtube video session https://youtu.be/ZWCvNFUN-sU?t=336  
+
+So the finnal architecture is:
+![arch final](./img/img09-arch-02.png)
 ## Clean 
 Delete whole stack in one command. It is very easy and clean.
 ```
 cdk destroy
 ```
-You can check the CloudFormation in AWS Console to confirm the delete completed or find the cause if there is fail.
+You can check the CloudFormation in AWS Console -> CloudFormation to confirm the delete completed or find the cause if there is fail.
