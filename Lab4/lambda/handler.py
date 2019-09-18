@@ -87,7 +87,6 @@ def read_short_url(event):
         'statusCode': 301,
         'headers': {
             'Location': item.get('target_url')
-        },
-        'body': 'Redirect to '+item.get('target_url')
+        }
     }
     
