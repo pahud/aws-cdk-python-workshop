@@ -1,4 +1,4 @@
-# Lab5 - Build a serverless container application with AWS CDK in Python  
+# Lab5 - Build a Fask App with AWS CDK in Python on Fargate
 
 ## Architecture
 In this Lab, we will build a serverless conatiner flask application with AWS CDK in Python, it will create build the flask docker image and then deploy to Fargate task and service in a few lines of CDK Python code.
@@ -51,7 +51,7 @@ More detail of aws configure, refer to: https://docs.aws.amazon.com/cli/latest/u
     cd cdk-pycon-flask
     cdk init app --language=python
     ```
-* Copy and override [requirements.txt]() to your work folder
+* Copy and override [requirements.txt](https://github.com/pahud/aws-cdk-python-workshop/blob/master/Lab5/cdk-pycon-flask/requirements.txt) to your work folder
 
 * Now open a Terminal in your IDE and create env and install the dependencies  
 ```
@@ -67,8 +67,8 @@ pip install -r requirements.txt
 
 Now you can start coding your infrastructure.   
 ## Coding 
-* Copy and override [cdk_pycon_flask_stack.py]() to your work folder ./cdk_pycon_flask/cdk_pycon_flask_stack.py in your IDE.
-* Copy directory [flask-docker-app]() to your work folder ./ in your IDE.
+* Copy and override [cdk_pycon_flask_stack.py](https://github.com/pahud/aws-cdk-python-workshop/blob/master/Lab5/cdk-pycon-flask/cdk_pycon_flask/cdk_pycon_flask_stack.py) to your work folder ./cdk_pycon_flask/cdk_pycon_flask_stack.py in your IDE.
+* Copy directory [flask-docker-app](https://github.com/pahud/aws-cdk-python-workshop/tree/master/Lab5/cdk-pycon-flask/flask-docker-app) to your work folder ./ in your IDE.
 
 ## Deploy 
 * Deploy the stack in Terminal:
