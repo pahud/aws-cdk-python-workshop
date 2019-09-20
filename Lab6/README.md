@@ -43,7 +43,7 @@ More detail of aws configure, refer to: https://docs.aws.amazon.com/cli/latest/u
     cd cdk-pycon-eks
     cdk init app --language=python
     ```
-* Copy and override [requirements.txt]() to your work folder
+* Copy and override [requirements.txt](https://github.com/pahud/aws-cdk-python-workshop/blob/master/Lab6/cdk-pycon-eks/requirements.txt) to your work folder
 
 * Now open a Terminal in your IDE and create env and install the dependencies  
 ```
@@ -59,8 +59,8 @@ pip install -r requirements.txt
 
 Now you can start coding your infrastructure.   
 ## Coding 
-* Copy and override [app.py]() to your work folder ./app.py in your IDE.
-* Copy and override [cdk_pycon_eks_stack.py]() to your work folder ./cdk_pycon_eks/cdk_pycon_flask_eks.py in your IDE.
+* Copy and override [app.py](https://github.com/pahud/aws-cdk-python-workshop/blob/master/Lab6/cdk-pycon-eks/app.py) to your work folder ./app.py in your IDE.
+* Copy and override [cdk_pycon_eks_stack.py](https://github.com/pahud/aws-cdk-python-workshop/blob/master/Lab6/cdk-pycon-eks/cdk_pycon_eks/cdk_pycon_eks_stack.py) to your work folder ./cdk_pycon_eks/cdk_pycon_flask_eks.py in your IDE.
 
 ## Deploy 
 * Deploy the stack in Terminal:
@@ -68,8 +68,7 @@ Now you can start coding your infrastructure.
 cdk deploy
 ```
 Enter "y" while deploying ask to confirm.  
-You can observe via AWS Console -> CloudFormation to see the CloudFormation template is being deploy and after a few minutes, output will display the URL of service.
-![](https://pbs.twimg.com/media/ED7YUbfU4AAth_r?format=jpg&name=4096x4096)
+You can observe via AWS Console -> CloudFormation to see the CloudFormation template is being deploy.
 
 ## Clean up
 Delete whole stack in one command. It is very easy and clean.
