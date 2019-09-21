@@ -4,4 +4,4 @@
 
 2. click **Apply & Restart**
 
-![](images/docker-registry-mirror.png)
+![](https://user-images.githubusercontent.com/278432/65368788-17809600-dc78-11e9-89bf-0ac7e8a85a83.png)
