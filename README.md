@@ -1,3 +1,4 @@
+![](https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-128-dark.png)
 # aws-cdk-python-workshop
 
 This workshop provides with some samples to walk you through the AWS Serverless and Container development with AWS CDK and Python. 
