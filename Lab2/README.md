@@ -17,7 +17,7 @@ $ cd aws-lambda-layer-awscli/
 
 ```bash
 # Let's create a staging bucket in Tokyo region
-$ aws --region ap-northeast-1 s3 mb 3://pahud-tmp-ap-northeast-1
+$ aws --region ap-northeast-1 s3 mb s3://pahud-tmp-ap-northeast-1
 ```
 
 
